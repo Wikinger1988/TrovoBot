@@ -45,10 +45,12 @@
   },
   "scripts": {
     "start": "node server.js",
-    "launch": "cross-env NODE_ENV=development nodemon ./app.js --watch app/*",
+    "start-server": "node ./node_modules/nodemon/bin/nodemon.js ./app.js --watch app/*",
     "build": "node ./buildScript",
     "lint": "node ./node_modules/eslint/bin/eslint.js . --fix",
-    "test": "jest"
+    "test": "jest",
+    "start-front": "node ./node_modules/react-scripts/bin/react-scripts.js start",
+    "start-dev": "node ./node_modules/concurrently/bin/concurrently.js \"npm run start-server\" \"npm run start-front\" --kill-others"
   },
   "eslintConfig": {
     "extends": "react-app"

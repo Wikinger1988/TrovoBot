@@ -1,6 +1,5 @@
-const express = require('express');
-const app = express.Router();
+const express = require('express')
 
+const app = express.Router()
 
-
-module.exports = app;
+module.exports = app

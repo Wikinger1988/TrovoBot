@@ -12,13 +12,18 @@
   "license": {
     "type": "Apache-2.0",
     "url": "https://opensource.org/licenses/apache2.0.php"
-    },
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Bioblaze/TrovoBot.git"
+  },
   "description": "Trovobot with a Visual Frontend for Easy of use~",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.0",
     "clear": "^0.1.0",
     "colors": "^1.4.0",
     "compression": "^1.7.4",
@@ -33,6 +38,7 @@
     "helmet": "^3.23.3",
     "open": "^7.1.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
@@ -50,10 +56,8 @@
     "lint": "node ./node_modules/eslint/bin/eslint.js . --fix",
     "test": "jest",
     "start-front": "node ./node_modules/react-scripts/bin/react-scripts.js start",
-    "start-dev": "node ./node_modules/concurrently/bin/concurrently.js \"npm run start-server\" \"npm run start-front\" --kill-others"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "start-dev": "node ./node_modules/concurrently/bin/concurrently.js \"npm run start-server\" \"npm run start-front\" --kill-others",
+    "format": "node ./node_modules/prettier/bin/prettier.js --write \"**/*.+(js|jsx|json|css|md)\""
   },
   "browserslist": {
     "production": [
@@ -80,14 +84,19 @@
     "eslint": "^7.5.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-jsx": "^8.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.2.1",
     "nodemon": "^2.0.4",
+    "prettier": "2.0.5",
     "react-scripts": "3.4.1"
   }
 }

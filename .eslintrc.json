@@ -4,11 +4,29 @@
     "es2020": true,
     "node": true
   },
-  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:node/recommended",
+    "standard",
+    "standard-jsx"
+  ],
   "parserOptions": {
-    "ecmaVersion": 11
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
   },
-  "plugins": ["prettier"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": [
+    "prettier",
+    "react"
+  ],
   "rules": {
     "prettier/prettier": ["error"],
     "no-param-reassign": ["error", { "props": false }],
@@ -20,6 +38,16 @@
     "import/no-dynamic-require": "off",
     "no-caller": "off",
     "no-restricted-properties": "off",
-    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"]
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+    "react/jsx-no-bind": ["error", {
+      "allowArrowFunctions": true,
+      "allowBind": false,
+      "ignoreRefs": true
+    }],
+    "react/no-did-update-set-state": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unused-prop-types": "error",
+    "react/prop-types": "error",
+    "react/react-in-jsx-scope": "error"
   }
 }
